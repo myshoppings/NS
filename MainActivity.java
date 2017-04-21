@@ -61,10 +61,14 @@ public class MainActivity extends AppCompatActivity {
         deleteBtn = (Button) findViewById(R.id.deleteBtn);
         editBtn = (Button) findViewById(R.id.editBtn);
 
-     //getting edit text from the XML
+        //getting edit text from the XML
         editText = (EditText) findViewById(R.id.editText);
 
         // adding values to Array to show in ListView
         Total_Groceries = dbHandler.databaseToString();
       
+        //defining a new adapter
+        Total_Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Total_Groceries);
+        Favorite_Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Favorite_Groceries);
+
       
