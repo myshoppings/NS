@@ -209,3 +209,19 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+  
+  @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch(item.getItemId())
+        {
+            case R.id.total_Item:
+                totalgroceries();
+                return true;
+            case R.id.favorite_Item:
+                favoritegroceries();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
