@@ -261,3 +261,19 @@ public class MainActivity extends AppCompatActivity {
 
         return true;
     }
+  
+  
+    //=============-functions that accesses the all groceries and favorite in the menu-=============
+    private void totalgroceries()
+    {
+        listView.setAdapter(Total_Adapter);
+        TotalShopping = true;
+    }
+
+    private void favoritegroceries()
+    {
+        listView.setAdapter(Favorite_Adapter);
+        TotalShopping = false;
+    }
+}
+
