@@ -99,3 +99,15 @@ public class MainActivity extends AppCompatActivity {
                 add();
             }
         });//addListener
+
+      //==============- Edit Button -=================
+
+        editBtn.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                // call created method
+                edit();
+            }
+        });//editListener
+
+      
