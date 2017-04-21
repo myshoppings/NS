@@ -35,3 +35,17 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayAdapter<String> Total_Adapter;
     ArrayAdapter<String> Favorite_Adapter;
+
+   //==========- declaring thr DB HANDLER -=========
+    MyDBHandler dbHandler;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+      
+             super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        dbHandler = new MyDBHandler(this, null, null, 1);
+
+        declareMain();
+    }
