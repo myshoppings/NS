@@ -10,3 +10,17 @@ android:paddingLeft="@dimen/activity_horizontal_margin"
 android:paddingRight="@dimen/activity_horizontal_margin"
 android:paddingTop="@dimen/activity_vertical_margin"
 tools:context="com.example.sultan.myshoppings.com.example.sultan.ShoppingList.MainActivity">
+
+  
+<EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/editText"
+    android:inputType="text"
+    android:ems="15"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentStart="true"
+    android:hint="insert text here" />
+  
+  
