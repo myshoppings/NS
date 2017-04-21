@@ -7,6 +7,10 @@
         android:showAsAction="always"
         />
 
-  
+   <item
+        android:id="@+id/favorite_Item"
+        android:title="@string/fav"
+        android:showAsAction="always"
+        />
   
 </menu>
