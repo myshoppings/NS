@@ -60,3 +60,20 @@ public class MyDBHandler extends SQLiteOpenHelper {
 
     }
     
+    
+      //print out the database as string
+    public ArrayList<String> databaseToString(){
+        String dbString = "";
+        ArrayList<String> listOfTotalGroceries = new ArrayList<>();
+        SQLiteDatabase db = getWritableDatabase();
+        String query = "SELECT * FROM " + TABLE_GROCERY + " WHERE 1";
+       // String query = "SELECT * FROM " + TABLE_NAME;
+
+        //Cursor points to a location in your results
+        Cursor c = db.rawQuery(query, null);
+        //Move to the first row in your results
+        c.moveToFirst();
+        //Position after the last row means the end of the results
+      
+    }
+    
