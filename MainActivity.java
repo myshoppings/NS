@@ -75,4 +75,20 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(Total_Adapter);
         registerForContextMenu(listView);
       
+      //list view items click listener
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                editText.setText(listView.getAdapter().getItem(position).toString());
+                selectedPosition = listView.getAdapter().getItem(position).toString();
+
+                // ListView Clicked item value
+                String itemValue = (String) listView.getItemAtPosition(position);
+
+                // Show Alert
+                Toast.makeText(getApplicationContext(),
+                        "You have selected : " + itemValue, Toast.LENGTH_LONG).show();
+            }
+        });
+      
       
