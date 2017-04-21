@@ -208,6 +208,8 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.my_main_menu, menu);
         return true;
     }
+  
+  
 
   
   @Override
@@ -230,4 +232,23 @@ public class MainActivity extends AppCompatActivity {
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo)
     {
         super.onCreateContextMenu(menu, v, menuInfo);
-  
+ 
+      
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.my_main_context_menu, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item)
+    {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
+
+        if (item.getItemId() == R.id.move_id)
+        {
+            int position = info.position;
+            if (!Favorite_Groceries.contains(Total_Groceries.get(position)) && TotalShopping)
+        {
+            Favorite_Groceries.add(Total_Groceries.get(info.position));
+
+            Toast.makeText(getApplicationContext(), "Added: " + Total_Groceries.get(info.position) + " to Favorite.", Toast.LENGTH_SHORT).show();
+        }
