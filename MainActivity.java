@@ -49,3 +49,15 @@ public class MainActivity extends AppCompatActivity {
 
         declareMain();
     }
+  
+    //==============- declareMain -=================
+    private void declareMain()
+    {
+        //getting listView object from XML
+        listView = (ListView) findViewById(R.id.listView);
+
+        //getting button from the XML
+        addBtn = (Button) findViewById(R.id.addBtn);
+        deleteBtn = (Button) findViewById(R.id.deleteBtn);
+        editBtn = (Button) findViewById(R.id.editBtn);
+
