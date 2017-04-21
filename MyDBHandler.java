@@ -75,5 +75,12 @@ public class MyDBHandler extends SQLiteOpenHelper {
         c.moveToFirst();
         //Position after the last row means the end of the results
       
+          while (!c.isAfterLast()) {
+          
+            c.moveToNext();
+        }
+        db.close();
+        return listOfTotalGroceries;
+        
     }
     
