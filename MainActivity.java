@@ -198,3 +198,14 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Nothing to Delete", Toast.LENGTH_SHORT).show();
         }
     }// end of delete function
+  
+   //==============================================================================================
+    //=====================- MENU Functions-===============================
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.my_main_menu, menu);
+        return true;
+    }
+
