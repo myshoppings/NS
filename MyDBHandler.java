@@ -40,3 +40,15 @@ public class MyDBHandler extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_GROCERY);
         onCreate(db);
     }
+    
+    
+    //Add a new row to the database
+    public void addGrocery(Grocery grocery){
+
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_NAME, grocery.get_groceryname());
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.insert(TABLE_GROCERY, null, values);
+        db.close();
+    }
+
