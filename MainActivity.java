@@ -61,3 +61,10 @@ public class MainActivity extends AppCompatActivity {
         deleteBtn = (Button) findViewById(R.id.deleteBtn);
         editBtn = (Button) findViewById(R.id.editBtn);
 
+     //getting edit text from the XML
+        editText = (EditText) findViewById(R.id.editText);
+
+        // adding values to Array to show in ListView
+        Total_Groceries = dbHandler.databaseToString();
+      
+      
