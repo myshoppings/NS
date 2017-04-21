@@ -51,3 +51,11 @@ tools:context="com.example.sultan.myshoppings.com.example.sultan.ShoppingList.Ma
     android:layout_centerHorizontal="true"
     />
 
+  <Button
+    android:text="@string/delete"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/deleteBtn"
+    android:layout_alignTop="@+id/editBtn"
+    android:layout_alignParentEnd="true"
+    />
