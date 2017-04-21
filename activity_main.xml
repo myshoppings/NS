@@ -59,3 +59,5 @@ tools:context="com.example.sultan.myshoppings.com.example.sultan.ShoppingList.Ma
     android:layout_alignTop="@+id/editBtn"
     android:layout_alignParentEnd="true"
     />
+  
+  </RelativeLayout>
