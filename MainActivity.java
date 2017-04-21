@@ -145,3 +145,30 @@ public class MainActivity extends AppCompatActivity {
         }
     }// end add function
   
+  
+     //==============- Edit Function -=================
+    private void edit()
+    {
+        String name = editText.getText().toString();
+        int pos = listView.getCheckedItemPosition();
+
+        if(!name.isEmpty() && name.length() >=0)
+        {
+            if(TotalShopping)
+                ((ArrayAdapter)listView.getAdapter()).remove(Total_Groceries.get(pos));
+            else
+                ((ArrayAdapter)listView.getAdapter()).remove(Favorite_Groceries.get(pos));
+
+            ((ArrayAdapter)listView.getAdapter()).insert(name, pos);
+            ((ArrayAdapter)listView.getAdapter()).notifyDataSetChanged();
+
+            editText.setText("");
+
+            Toast.makeText(getApplicationContext(), "Item Updated: " + name, Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(), "Nothing to update", Toast.LENGTH_SHORT).show();
+        }
+    }// end of edit function
+  
