@@ -71,4 +71,8 @@ public class MainActivity extends AppCompatActivity {
         Total_Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Total_Groceries);
         Favorite_Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Favorite_Groceries);
 
+        //assign adapter to list view
+        listView.setAdapter(Total_Adapter);
+        registerForContextMenu(listView);
+      
       
