@@ -91,4 +91,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
       
-      
+      //==============- Add Button Listener -=================
+
+        addBtn.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                add();
+            }
+        });//addListener
