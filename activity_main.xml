@@ -31,3 +31,12 @@ tools:context="com.example.sultan.myshoppings.com.example.sultan.ShoppingList.Ma
     android:layout_alignParentStart="true"
     android:layout_marginTop="90dp"
     android:choiceMode="singleChoice"/>
+
+<Button
+    android:text="@string/add"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/addBtn"
+    android:layout_below="@+id/editText"
+    android:layout_alignParentStart="true"
+    android:layout_marginTop="25dp" />
