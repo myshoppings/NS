@@ -172,3 +172,29 @@ public class MainActivity extends AppCompatActivity {
         }
     }// end of edit function
   
+  
+      //==============- Delete Function -=================
+    private void delete()
+    {
+        Grocery grocery = new Grocery(editText.getText().toString());
+        //grocery.set_groceryname(grocery.get_groceryname().replace("\n", ""));
+
+        int pos = listView.getCheckedItemPosition();
+
+        if(pos > -1 && listView.getCount() > 0)
+        {
+            if (TotalShopping)
+                ((ArrayAdapter)listView.getAdapter()).remove(Total_Groceries.get(pos));
+            else
+                ((ArrayAdapter)listView.getAdapter()).remove(Favorite_Groceries.get(pos));
+
+            Toast.makeText(getApplicationContext(), "Item Deleted.", Toast.LENGTH_SHORT).show();
+            dbHandler.deleteGrocery(grocery);
+
+            // Toast.makeText(getApplicationContext(), "are you here." + grocery.get_groceryname(), Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(), "Nothing to Delete", Toast.LENGTH_SHORT).show();
+        }
+    }// end of delete function
