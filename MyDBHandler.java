@@ -52,3 +52,11 @@ public class MyDBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+    
+    //Delete a user from the database
+    public void deleteGrocery(Grocery grocery) {
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL("DELETE FROM " + TABLE_GROCERY + " WHERE " + COLUMN_NAME + " = '"+ grocery.get_groceryname() +"';");
+
+    }
+    
