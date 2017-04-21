@@ -111,3 +111,37 @@ public class MainActivity extends AppCompatActivity {
         });//editListener
 
       
+        //==============- delete Button -=================
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                // call created method
+                delete();
+            }
+        });
+
+       }//end declare main method
+  
+  
+     //==============- add Function -=================
+    private void add()
+    {
+        Grocery grocery = new Grocery(editText.getText().toString());
+
+        String name = editText.getText().toString();
+        if(!name.isEmpty() && name.length() >=0)
+        {
+            ((ArrayAdapter)listView.getAdapter()).add(name);
+            ((ArrayAdapter)listView.getAdapter()).notifyDataSetChanged();
+
+            editText.setText("");
+
+            Toast.makeText(getApplicationContext(), "Item Added: " + name, Toast.LENGTH_SHORT).show();
+            dbHandler.addGrocery(grocery);
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(), "Nothing to add", Toast.LENGTH_SHORT).show();
+        }
+    }// end add function
+  
