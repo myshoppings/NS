@@ -76,7 +76,11 @@ public class MyDBHandler extends SQLiteOpenHelper {
         //Position after the last row means the end of the results
       
           while (!c.isAfterLast()) {
-          
+            if (c.getString(c.getColumnIndex("name")) != null) {
+                dbString += c.getString(c.getColumnIndex("name"));
+                listOfTotalGroceries.add(dbString);
+                dbString = "\n";
+            }
             c.moveToNext();
         }
         db.close();
