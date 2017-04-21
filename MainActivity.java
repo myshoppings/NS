@@ -252,3 +252,12 @@ public class MainActivity extends AppCompatActivity {
 
             Toast.makeText(getApplicationContext(), "Added: " + Total_Groceries.get(info.position) + " to Favorite.", Toast.LENGTH_SHORT).show();
         }
+
+             else
+            {
+                Toast.makeText(getApplicationContext(), "Item already there in the favorite", Toast.LENGTH_SHORT).show();
+            }
+        }
+
+        return true;
+    }
