@@ -19,3 +19,19 @@ import com.example.sultan.myshoppings.R;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+  
+    //==============- declaration -=================
+
+    boolean TotalShopping = true;
+
+    ListView listView;
+    EditText editText;
+    Button addBtn, editBtn, deleteBtn;
+    String selectedPosition;
+
+    ArrayList<String> Total_Groceries = new ArrayList<>();
+    ArrayList<String> Favorite_Groceries = new ArrayList<>();
+
+    ArrayAdapter<String> Total_Adapter;
+    ArrayAdapter<String> Favorite_Adapter;
