@@ -1,5 +1,8 @@
 # NS
 
+Note,
+I gathered all the android studio files into .rar file.
+
 
 This is our recording video for Android Studio app the link is belew 
 
